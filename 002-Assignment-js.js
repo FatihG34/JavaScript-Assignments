@@ -1,26 +1,37 @@
-let email = "asdf@gmail.com";
-console.log(email);
+// let emaill = "asdf@gmail.com";
 
-var a = ['dog', 'lion', 'hen'];
-console.log(a.length);
-a[100] = 'horse';
-console.log(a.length);
-console.log(typeof a[50]);
-console.log(a);
-let b;
-console.log(b);
-function addTax(total) {
-    return total * 1.05;
+// let email = "dfg.ert@gmail.com";
+
+// console.log(email.includes("@"));
+
+// console.log(email.indexOf("@"));
+
+// console.log(email.includes("."));
+
+// console.log(email.indexOf("."));
+// let lastItems = (email.length - 1) - email.indexOf(".");
+// console.log(lastItems);
+// console.log(lastItems >= 2 && lastItems < 4);
+
+// let firstItems = email.slice(0, email.indexOf("@"));
+// console.log(firstItems);
+// console.log(firstItems.search(/\W/g));
+
+// let pattern = /\W/g;
+// console.log(pattern);
+// console.log(firstItems.search(pattern));
+
+let email = prompt("Please enter email :");
+function emailvalidator(email) {
+    if (email.includes("@") && email.includes(".")) {
+        let lastItems = (email.length - 1) - email.indexOf(".");
+        let firstItems = email.slice(0, email.indexOf("@"));
+        if (firstItems.search(/\W/g) === -1 && (lastItems >= 2 && lastItems < 4)) {
+            return "valid";
+        } else {
+            return "invalid";
+        }
+
+    }
 }
-;
-console.log(addTax(50));
-
-let price = (price) => {
-    return price * 0.85;
-};
-console.log(price);
-
-
-"use strict";
-x = 3.14;
-console.log(x);
+console.log(emailvalidator(email));
