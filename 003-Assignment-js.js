@@ -74,5 +74,5 @@ console.log(`\\************ -- Assignment-7 -- ************/`);
 
 const ortalama = maaslar1.reduce((topla, maas) => topla + maas, 0) / maaslar1.length;
 console.log(ortalama);
-const artıs = maaslar1.filter((maas) => maas < ortalama).map((art) => (art * 1.2).toFixed(2));
+const artıs = maaslar1.filter((maas) => maas < maaslar1.reduce((topla, maas) => topla + maas, 0) / maaslar1.length).map((art) => (art * 1.2).toFixed(2));
 console.log(artıs);
