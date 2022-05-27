@@ -54,3 +54,9 @@ console.log(`Example 4`);
 
 const nameLess33 = kisiler.filter((ageLess33) => ageLess33.age < 33).forEach((nameLessThan33) => console.log(nameLessThan33.name));
 
+console.log(`Example 5`);
+//*Example 5: Hide the names of those younger than 33 years old in the array
+const nameLess33Array = kisiler.filter((ageLess33) => ageLess33.age < 33).map((nameLessThan33) => nameLessThan33.name);
+console.log(nameLess33Array);
+
+console.log(`Example 6`);
