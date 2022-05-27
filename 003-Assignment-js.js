@@ -65,5 +65,14 @@ maaslar1.forEach((q) => sum += q)
 console.log(sum);
 
 //* Using reduce()
-const toplam = maaslar1.reduce(((tpl, value) => tpl + value))
+const toplam = maaslar1.reduce(((tpl, value) => tpl + value), 0)
 console.log("Verilen maaşların toplam değeri :", toplam);
+
+
+console.log(`\\************ -- Assignment-7 -- ************/`);
+//? For the salary series, let's put the increased salaries in a separate series by giving a 20% increase to those whose salaries are below the average.
+
+const ortalama = maaslar1.reduce((topla, maas) => topla + maas, 0) / maaslar1.length;
+console.log(ortalama);
+const artıs = maaslar1.filter((maas) => maas < ortalama).map((art) => (art * 1.2).toFixed(2));
+console.log(artıs);
