@@ -60,3 +60,12 @@ const nameLess33Array = kisiler.filter((ageLess33) => ageLess33.age < 33).map((n
 console.log(nameLess33Array);
 
 console.log(`Example 6`);
+//* Example6: Save the names and ages of the developers in the new series as a new Object.
+
+const developerObject = kisiler.filter((jop) => jop.job == "developer").map((kisi) => (
+    {
+        name: kisi.name,
+        age: kisi.age
+    }
+));
+console.log(developerObject);
