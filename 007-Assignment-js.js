@@ -50,3 +50,6 @@ function printKMax(arr, k) {
 let arrr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let k = 3;
 printKMax(arrr, k);
+const newArr = [22, 5, 23, 12, 77, 52, 14, 83];
+let num = 4;
+printKMax(newArr, num)
