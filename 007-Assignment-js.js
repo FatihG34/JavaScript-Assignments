@@ -6,18 +6,47 @@
 
 
 
-const array = [10, 5, 2, 7, 8, 7, 22, 9, 15];
-let k = 5;
-console.log('Length of Given Array :', array.length);
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// let k = 3;
+// console.log('Length of Given Array :', array.length);
 
-const slidingMax = (arr, k) => {
-    if (k < 1 || k > arr.length) {
-        alert(`${k} must bu greater than 1 and less than ${arr.length}`)
+// const slidingMax = (arr, k) => {
+//     if (k < 1 || k > arr.length) {
+//         alert(`${k} must bu greater than 1 and less than ${arr.length}`)
+//     }
+//     const newArray = [];
+//     for (let i = 0; i < arr.length - k + 1; i++) {
+//         if () {
+//             newArray.push(Math.max(arr[i], arr[i + 1], arr[i + 2]))
+//         }
+
+//     }
+//     console.log(newArray);
+// }
+// slidingMax(array, k);
+
+
+
+
+
+
+function printKMax(arr, k) {
+    let j, max;
+    let newList = [];
+
+    for (let i = 0; i <= arr.length - k; i++) {
+        max = arr[i];
+
+        for (j = 1; j < k; j++) {
+            if (arr[i + j] > max)
+                max = arr[i + j];
+        }
+        newList.push(max)
     }
-    const newArray = [];
-    for (let i = 0; i < arr.length - k + 1; i++) {
-        newArray.push(Math.max(arr[i], arr[i + 1], arr[i + 2]))
-        console.log(newArray);
-    }
+    console.log(newList)
 }
-slidingMax(array, k);
+
+
+let arrr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let k = 3;
+printKMax(arrr, k);
