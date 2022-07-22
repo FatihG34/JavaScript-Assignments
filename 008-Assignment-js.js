@@ -1,22 +1,18 @@
-// function bracketValidator(bracket) {
-//     while (bracket.includes('()')) {
-//         bracket.replace('()', '');
-//     }
-//     return bracket === ''
-// }
-function bracketValidator(bracket) {
+const bracketValidator = (bracket) => {
+
     if (bracket.includes('()') || bracket.includes('[]') || bracket.includes('{}')) {
+
         while (bracket.includes('()') || bracket.includes('[]') || bracket.includes('{}')) {
-            bracket.replace('()', '').replace('[]', '').replace('{}', '')
+
+            bracket = bracket.replace('()', '').replace('[]', '').replace('{}', '');
+
         }
-        return bracket === ''
+        return bracket === '';
+        
     } else {
-        return false
+        return false;
     }
 }
 
-
-let oldumu = '{[()]}';
+let oldumu = '{([])}';
 console.log(bracketValidator(oldumu));
-
-// console.log(oldumu.includes('()'));
